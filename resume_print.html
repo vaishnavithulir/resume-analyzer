@@ -6,7 +6,7 @@
 <style>
   @page {
     size: letter portrait;
-    margin: 0.30in 0.42in 0.28in 0.42in;
+    margin: 0.28in 0.40in 0.25in 0.40in;
   }
   * {
     box-sizing: border-box;
@@ -15,29 +15,37 @@
   }
   body {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 9.35pt;
-    line-height: 1.20;
+    font-size: 9.2pt;
+    line-height: 1.18;
     color: #111;
     background: #fff;
   }
   .header {
     text-align: center;
-    margin-bottom: 4px;
+    margin-bottom: 3.5px;
   }
   .name {
-    font-size: 19pt;
+    font-size: 18.5pt;
     font-weight: bold;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-bottom: 1.5px;
+    margin-bottom: 1px;
+  }
+  .job-role {
+    font-size: 9.3pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #222;
+    margin-bottom: 2px;
   }
   .contact-line {
-    font-size: 8.7pt;
+    font-size: 8.6pt;
     color: #222;
     margin-bottom: 1px;
   }
   .links-line {
-    font-size: 8.7pt;
+    font-size: 8.6pt;
     color: #222;
   }
   a {
@@ -45,56 +53,60 @@
     text-decoration: underline;
   }
   .section-title {
-    font-size: 10.3pt;
+    font-size: 10.1pt;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
     border-bottom: 1px solid #222;
-    padding-bottom: 1px;
-    margin-top: 4px;
-    margin-bottom: 2.5px;
+    padding-bottom: 0.5px;
+    margin-top: 3.5px;
+    margin-bottom: 2px;
   }
   .summary-text {
-    font-size: 8.95pt;
+    font-size: 8.85pt;
     text-align: justify;
-    line-height: 1.19;
+    line-height: 1.17;
   }
   .item-header {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    font-size: 9.15pt;
-    margin-top: 2px;
+    font-size: 9pt;
+    margin-top: 1.8px;
   }
   .item-subheader {
     display: flex;
     justify-content: space-between;
     font-style: italic;
-    font-size: 8.65pt;
+    font-size: 8.5pt;
     color: #333;
     margin-bottom: 1px;
   }
   ul {
-    margin-left: 16px;
-    margin-bottom: 1.5px;
+    margin-left: 15px;
+    margin-bottom: 1px;
   }
   li {
-    font-size: 8.85pt;
-    margin-bottom: 1px;
-    line-height: 1.18;
+    font-size: 8.7pt;
+    margin-bottom: 0.8px;
+    line-height: 1.16;
   }
   .skills-row {
-    font-size: 8.85pt;
-    margin-bottom: 1.2px;
-    line-height: 1.19;
+    font-size: 8.7pt;
+    margin-bottom: 1px;
+    line-height: 1.17;
   }
   .skills-row strong {
     font-weight: bold;
   }
-  .cert-row {
-    font-size: 8.7pt;
-    line-height: 1.18;
+  .cert-list {
+    margin-left: 15px;
     margin-top: 1px;
+  }
+  .cert-list li {
+    font-size: 8.6pt;
+    margin-bottom: 0.6px;
+    line-height: 1.15;
   }
 </style>
 </head>
@@ -102,6 +114,7 @@
 
 <div class="header">
   <div class="name">Vaishnavi Devi K S</div>
+  <div class="job-role">Backend Developer Intern &nbsp;|&nbsp; Node.js, Distributed Systems &amp; Security</div>
   <div class="contact-line">
     +91 7806883918 &nbsp;|&nbsp; 
     <a href="mailto:vaishnavidevi.techie@gmail.com">vaishnavidevi.techie@gmail.com</a> &nbsp;|&nbsp; 
@@ -156,10 +169,9 @@
 <div class="section-title">Technical Skills</div>
 <div class="skills-row"><strong>Programming Languages:</strong> Node.js, Go (Basics), JavaScript (ES6+), Python, Java, SQL</div>
 <div class="skills-row"><strong>Backend Development:</strong> Express.js, RESTful APIs, FastAPI, Spring Boot, Microservices, Postman</div>
-<div class="skills-row"><strong>Databases &amp; Caching:</strong> MySQL (Relational SQL), MongoDB (NoSQL), ChromaDB (Vector DB), Redis Caching, Schema Design</div>
-<div class="skills-row"><strong>Cloud &amp; DevOps:</strong> Docker, Kubernetes, Jenkins, CI/CD Pipelines, AWS, Azure, GCP, Git, GitHub, Linux</div>
-<div class="skills-row"><strong>Cybersecurity &amp; Web:</strong> Input Validation, Magic-Byte File Verification, JWT, BCrypt, Web Protocols (HTTP/HTTPS), CORS, RBAC</div>
-<div class="skills-row"><strong>Soft Skills &amp; Methodologies:</strong> Problem Solving, Analytical Thinking, Communication, Cross-Functional Collaboration, Code Reviews</div>
+<div class="skills-row"><strong>Databases &amp; Cloud:</strong> MySQL, MongoDB, ChromaDB (Vector DB), Docker, Kubernetes, AWS, Azure, GCP</div>
+<div class="skills-row"><strong>DevOps &amp; Security:</strong> Jenkins, CI/CD Pipelines, Git, Linux, JWT, BCrypt, Input Validation, RBAC, CORS</div>
+<div class="skills-row"><strong>Core CS &amp; Soft Skills:</strong> Problem Solving, Analytical Thinking, Communication, Cross-Functional Collaboration, Code Reviews</div>
 
 <div class="section-title">Projects</div>
 <div class="item-header">
@@ -199,14 +211,12 @@
 </ul>
 
 <div class="section-title">Certifications</div>
-<div class="cert-row">
-  <strong>AWS Academy Cloud Foundations</strong> – AWS Academy &nbsp;|&nbsp; 
-  <strong>Cybersecurity Awareness &amp; AI Foundations</strong> – HP LIFE
-</div>
-<div class="cert-row">
-  <strong>Full Stack Web Development</strong> – InternsElite (ID: FSWD/26/A4/TC-19426) &nbsp;|&nbsp; 
-  <strong>AI &amp; ML with Python</strong> – InternsElite (ID: AIML-PY/26/A6/TC-19304)
-</div>
+<ul class="cert-list">
+  <li><strong>AWS Academy Cloud Foundations</strong> &nbsp;—&nbsp; AWS Academy</li>
+  <li><strong>Cybersecurity Awareness &amp; AI Foundations</strong> &nbsp;—&nbsp; HP LIFE</li>
+  <li><strong>Full Stack Web Development</strong> &nbsp;—&nbsp; InternsElite (Credential ID: FSWD/26/A4/TC-19426)</li>
+  <li><strong>AI &amp; Machine Learning with Python</strong> &nbsp;—&nbsp; InternsElite (Credential ID: AIML-PY/26/A6/TC-19304)</li>
+</ul>
 
 </body>
 </html>
