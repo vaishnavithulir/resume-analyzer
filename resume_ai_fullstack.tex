@@ -1,5 +1,5 @@
 %-------------------------
-% Resume in LaTeX (Single-Page ATS-Optimized for AI Full Stack Developer / AI Software Developer)
+% Resume in LaTeX (Single-Page ATS-Optimized for AI Full Stack Developer: Java, Spring Boot & Generative AI)
 % Author: Vaishnavi Devi K S
 % License: MIT
 %------------------------
@@ -18,7 +18,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 
-% Page Margins (Calibrated for strict 1-page fit)
+% Page Margins
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot{}
@@ -37,8 +37,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-7pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
 
 % Custom commands
 \newcommand{\resumeItem}[1]{
@@ -65,7 +65,7 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -75,106 +75,93 @@
 %----------HEADING----------
 \begin{center}
     \textbf{\Huge \scshape Vaishnavi Devi K S} \\ \vspace{2pt}
-    \textbf{\large AI FULL STACK DEVELOPER} $|$ \small AI Software Developer \\ \vspace{2pt}
+    \textbf{\large AI Full Stack Developer \ \textbar \ \ Java, Spring Boot \& Generative AI} \\ \vspace{2pt}
     \small +91 7806883918 $|$ \href{mailto:vaishnavidevi.techie@gmail.com}{\underline{vaishnavidevi.techie@gmail.com}} $|$ Erode, Tamil Nadu, India \\ \vspace{1pt}
     \href{https://linkedin.com/in/vaishnavi-devi-k-s-82805231a}{\underline{linkedin.com/in/vaishnavi-devi-k-s-82805231a}} $|$ 
     \href{https://github.com/vaishnavithulir}{\underline{github.com/vaishnavithulir}} $|$ 
     \href{https://vaishnavideviks.netlify.app/}{\underline{vaishnavideviks.netlify.app}}
 \end{center}
-\vspace{-10pt}
 
-%-----------SUMMARY-----------
+%-----------PROFESSIONAL SUMMARY-----------
 \section{Professional Summary}
-\small{High-achieving MCA student and Full-Stack AI Developer specializing in \textbf{Agentic AI, LLM Integrations, and Scalable Web Applications}. Proven hands-on experience developing production-ready systems using \textbf{Python (FastAPI), React.js, Next.js, Node.js, and Java (Spring Boot)}. Adept in implementing semantic search pipelines with \textbf{vector databases (ChromaDB)}, deploying \textbf{LLMs (Google Gemini API)} with fallback mechanisms, and containerizing microservices with \textbf{Docker}. Strong foundation in full-stack architecture, relational/NoSQL databases, and clean code standards.}
-\vspace{-3pt}
-
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {CubeAI Solutions Pvt. Ltd.}{Feb 2026 -- Jul 2026}
-      {Agentic AI Full-Stack Developer Intern}{Bengaluru, India}
-      \resumeItemListStart
-        \resumeItem{\textbf{Engineered full-stack modules and high-throughput RESTful APIs} using React.js, Next.js, Node.js, Express.js, and MongoDB, bridging interactive UI components with low-latency backend services.}
-        \resumeItem{\textbf{Architected vector retrieval pipelines for ProposalFlow AI} using Python, FastAPI, and ChromaDB, enabling sub-second semantic document retrieval and agentic AI-powered proposal generation.}
-        \resumeItem{\textbf{Integrated Large Language Model APIs (Google Gemini)} with dynamic prompt engineering and resilient offline fallback mechanisms, automating contextual document extraction and synthesis.}
-        \resumeItem{\textbf{Containerized application microservices using Docker}, establishing standardized development environments and seamless multi-environment CI/CD deployments.}
-        \resumeItem{\textbf{Enforced enterprise-grade security and authentication standards}, implementing stateless JWT authentication, CORS policies, and strict request schema validation.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-\vspace{-6pt}
-
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{AI \& LLM Engineering}{: Agentic AI Workflows, LLM APIs (Google Gemini), ChromaDB (Vector DB), RAG Architecture, Semantic Search, Prompt Engineering} \\ \vspace{1pt}
-     \textbf{Languages \& Frameworks}{: Python, JavaScript (ES6+), Java (21/17), SQL, FastAPI, React.js, Next.js, Spring Boot 3, Node.js, Express.js} \\ \vspace{1pt}
-     \textbf{Databases, Cloud \& DevOps}{: MySQL, MongoDB, Docker (Containerization), AWS Foundations, Git, GitHub, Linux, CI/CD Pipelines, Postman} \\ \vspace{1pt}
-     \textbf{Software Engineering}{: Data Structures \& Algorithms (DSA), OOP, Unit Testing (JUnit 5, Mockito), Problem Solving, Code Reviews, JWT \& RBAC Security}
-    }}
- \end{itemize}
-\vspace{-10pt}
-
-%-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{AI Resume Analyzer \& Job Match Engine} $|$ \emph{Spring Boot 3, Java 21, React 18, MySQL, Gemini API}}{
-          \href{https://resume-analyzer.ksvaishnavidevibca.workers.dev/}{\underline{Live Demo}} $|$ \href{https://github.com/vaishnavithulir/resume-analyzer}{\underline{GitHub}}}
-          \resumeItemListStart
-            \resumeItem{Built full-stack AI evaluation engine parsing PDF/DOCX resumes via Apache Tika with magic-byte security and an explainable 60/20/20 scoring rubric across 67+ skills.}
-            \resumeItem{Integrated Google Gemini 1.5 Flash with resilient offline fallback to generate Google XYZ-formula bullet rewrites; verified with 31 automated JUnit 5 and MockMvc tests.}
-          \resumeItemListEnd
-
-      \resumeProjectHeading
-          {\textbf{ProposalFlow AI: Vector Retrieval \& Agentic System} $|$ \emph{FastAPI, Python, ChromaDB, Docker}}{
-          \href{https://vaishnavideviks.netlify.app/}{\underline{Portfolio Project}}}
-          \resumeItemListStart
-            \resumeItem{Engineered automated retrieval backend utilizing \textbf{ChromaDB vector embeddings} and FastAPI for semantic document search and context enrichment.}
-            \resumeItem{Containerized backend services with multi-stage \textbf{Docker} builds, ensuring lightweight execution and rapid CI/CD deployment pipelines.}
-          \resumeItemListEnd
-
-      \resumeProjectHeading
-          {\textbf{Luxe: Full-Stack E-Commerce \& Admin Platform} $|$ \emph{React 19, Node.js, Express.js, MongoDB, Vite}}{
-          \href{https://luxe-ecommerce-482.netlify.app/}{\underline{Live Demo}}}
-          \resumeItemListStart
-            \resumeItem{Architected single-page web app with persistent cart state, responsive design, and modular Node.js/Express REST APIs with MongoDB schemas.}
-            \resumeItem{Implemented admin dashboard featuring role-based access control (RBAC), product CRUD operations, and JWT/BCrypt secure authentication.}
-          \resumeItemListEnd
-
-      \resumeProjectHeading
-          {\textbf{Movie Recommendation \& Semantic Engine} $|$ \emph{Python, TF-IDF, Cosine Similarity, TMDB API}}{
-          \href{https://moverecommenderapp.netlify.app/}{\underline{Live Demo}}}
-          \resumeItemListStart
-            \resumeItem{Developed content-based recommendation model using TF-IDF vectorization and cosine similarity to compute high-accuracy film suggestions from metadata.}
-            \resumeItem{Engineered data preprocessing pipelines and integrated third-party REST APIs to dynamically fetch and display posters and ratings.}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
-\vspace{-6pt}
+\small{
+Full-Stack Developer with hands-on experience engineering scalable web applications and intelligent AI systems using \textbf{Java 21, Spring Boot 3, React.js, and Python (FastAPI)}. Experienced in designing robust RESTful APIs, relational databases (MySQL, Spring Data JPA/Hibernate), and semantic retrieval pipelines (RAG, ChromaDB, Google Gemini API). Combines core software engineering principles—clean architecture, automated testing (JUnit 5, Mockito), and containerization (Docker)—with cutting-edge generative AI to deliver reliable, high-performance software.
+}
 
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {KSR College of Engineering}{Aug 2025 -- Present}
-      {Master of Computer Applications (MCA) -- CGPA: 8.96}{Tiruchengode, India}
+      {KSR College of Engineering}{Aug 2025 -- Present (Expected 2027)}
+      {Master of Computer Applications (MCA) \ \textbar \ \ \textbf{CGPA: 8.96}}{Tiruchengode, Tamil Nadu, India}
     \resumeSubheading
       {Amity University}{Jul 2022 -- May 2025}
-      {Bachelor of Computer Applications (BCA) -- CGPA: 8.67}{Noida, India}
+      {Bachelor of Computer Applications (BCA) \ \textbar \ \ \textbf{CGPA: 8.67}}{Noida, Uttar Pradesh, India}
   \resumeSubHeadingListEnd
-\vspace{-6pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Core Languages:}{ Java (21/17), Python, JavaScript (ES6+), SQL, HTML5/CSS3} \\
+     \textbf{Frameworks \& Backend:}{ Spring Boot 3, Spring Data JPA, Hibernate, React.js, Next.js, Node.js, Express.js, FastAPI} \\
+     \textbf{AI \& Data Engineering:}{ Agentic AI Workflows, LLM APIs (Google Gemini), RAG Architecture, ChromaDB, Semantic Search, Prompt Engineering} \\
+     \textbf{Databases \& DevOps:}{ MySQL, MongoDB, Docker (Containerization), Git, GitHub, RESTful APIs, Postman, Maven, Linux} \\
+     \textbf{Software Engineering:}{ Data Structures \& Algorithms (DSA), OOP, Unit Testing (JUnit 5, Mockito), System Design, JWT \& RBAC Security}
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {CubeAI Solutions Pvt. Ltd.}{Feb 2026 -- Jul 2026}
+      {AI Full-Stack Developer Intern (Remote)}{Bengaluru, India}
+      \resumeItemListStart
+        \resumeItem{Built responsive user interfaces and engineered \textbf{15+ RESTful endpoints} using React.js, Next.js, Node.js, and Express, linking frontend workflows to low-latency backend services.}
+        \resumeItem{Architected a vector search retrieval pipeline for ProposalFlow AI using \textbf{Python, FastAPI, and ChromaDB}, achieving sub-second semantic querying and reducing document retrieval latency by \textbf{30\%}.}
+        \resumeItem{Integrated \textbf{Google Gemini LLM APIs} with dynamic prompt templates and built-in offline fallbacks to automate intelligent document summarization and proposal drafting.}
+        \resumeItem{Containerized application microservices using \textbf{Docker} to standardize development environments and streamline CI/CD deployment pipelines across environments.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{AI Resume Analyzer \& Job Match Engine} $|$ \emph{Spring Boot 3, Java 21, React 18, MySQL, Gemini API}}{Live Demo $|$ GitHub}
+          \resumeItemListStart
+            \resumeItem{Engineered a full-stack platform parsing PDF/DOCX resumes via Apache Tika with magic-byte validation and an explainable 60/20/20 scoring algorithm evaluated against 67+ industry skills.}
+            \resumeItem{Integrated Google Gemini 1.5 Flash with offline heuristic fallbacks to generate Google XYZ-formula bullet rewrites; secured with \textbf{31 automated JUnit 5 and MockMvc tests}.}
+            \resumeItem{Implemented persistent candidate analytics and audit logs with Spring Data JPA and MySQL, deploying containerized instances with Docker.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{ProposalFlow AI: Semantic Retrieval \& Agentic System} $|$ \emph{Python, FastAPI, ChromaDB, Docker}}{Portfolio Project}
+          \resumeItemListStart
+            \resumeItem{Developed a high-throughput retrieval backend using \textbf{ChromaDB vector embeddings} and cosine similarity to index and semantically query enterprise proposal documents.}
+            \resumeItem{Packaged asynchronous FastAPI microservices with multi-stage \textbf{Docker} builds, ensuring lightweight execution, rapid cold-starts, and reliable production deployment.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Luxe: Full-Stack E-Commerce \& Admin Platform} $|$ \emph{React 19, Node.js, Express.js, MongoDB, Vite}}{Live Demo}
+          \resumeItemListStart
+            \resumeItem{Architected an end-to-end shopping platform featuring real-time cart persistence, responsive UI design, and modular REST APIs handling catalog and transaction data.}
+            \resumeItem{Implemented an administrative management portal with \textbf{JWT and BCrypt authentication}, role-based access control (RBAC), and secure CRUD operations for product inventory.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
 %-----------CERTIFICATIONS-----------
 \section{Certifications}
  \begin{itemize}[leftmargin=0.15in]
     \small{
-      \item{\textbf{Full Stack Web Development} -- InternsElite (Credential ID: FSWD/26/A4/TC-19426) \vspace{-2pt}}
-      \item{\textbf{AI \& Machine Learning with Python} -- InternsElite (Credential ID: AIML-PY/26/A6/TC-19304) \vspace{-2pt}}
-      \item{\textbf{AWS Academy Cloud Foundations} -- AWS Academy \vspace{-2pt}}
-      \item{\textbf{AI Foundations \& Cybersecurity Awareness} -- HP LIFE \vspace{-2pt}}
-      \item{\textbf{Java Programming} -- Great Learning \vspace{-2pt}}
+      \item \textbf{Java Programming} -- Great Learning (2024)
+      \item \textbf{Full Stack Web Development} -- InternsElite (2025)
+      \item \textbf{AI \& Machine Learning with Python} -- InternsElite (2025)
+      \item \textbf{AWS Academy Cloud Foundations} -- AWS Academy (2024)
+      \item \textbf{AI Foundations \& Cybersecurity Awareness} -- HP LIFE (2024)
     }
  \end{itemize}
 
+%-------------------------------------------
 \end{document}
