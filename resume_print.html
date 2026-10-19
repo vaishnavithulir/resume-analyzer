@@ -6,7 +6,7 @@
 <style>
   @page {
     size: letter portrait;
-    margin: 0.38in 0.46in;
+    margin: 0.30in 0.42in 0.28in 0.42in;
   }
   * {
     box-sizing: border-box;
@@ -15,29 +15,29 @@
   }
   body {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 9.5pt;
-    line-height: 1.23;
+    font-size: 9.35pt;
+    line-height: 1.20;
     color: #111;
     background: #fff;
   }
   .header {
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
   .name {
-    font-size: 19.5pt;
+    font-size: 19pt;
     font-weight: bold;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-bottom: 2px;
-  }
-  .contact-line {
-    font-size: 8.9pt;
-    color: #222;
     margin-bottom: 1.5px;
   }
+  .contact-line {
+    font-size: 8.7pt;
+    color: #222;
+    margin-bottom: 1px;
+  }
   .links-line {
-    font-size: 8.9pt;
+    font-size: 8.7pt;
     color: #222;
   }
   a {
@@ -45,56 +45,56 @@
     text-decoration: underline;
   }
   .section-title {
-    font-size: 10.6pt;
+    font-size: 10.3pt;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     border-bottom: 1px solid #222;
     padding-bottom: 1px;
-    margin-top: 5px;
-    margin-bottom: 3px;
+    margin-top: 4px;
+    margin-bottom: 2.5px;
   }
   .summary-text {
-    font-size: 9.1pt;
+    font-size: 8.95pt;
     text-align: justify;
-    line-height: 1.22;
+    line-height: 1.19;
   }
   .item-header {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    font-size: 9.3pt;
-    margin-top: 2.5px;
+    font-size: 9.15pt;
+    margin-top: 2px;
   }
   .item-subheader {
     display: flex;
     justify-content: space-between;
     font-style: italic;
-    font-size: 8.8pt;
+    font-size: 8.65pt;
     color: #333;
-    margin-bottom: 1.5px;
+    margin-bottom: 1px;
   }
   ul {
-    margin-left: 17px;
-    margin-bottom: 2px;
+    margin-left: 16px;
+    margin-bottom: 1.5px;
   }
   li {
-    font-size: 8.95pt;
-    margin-bottom: 1.5px;
-    line-height: 1.21;
+    font-size: 8.85pt;
+    margin-bottom: 1px;
+    line-height: 1.18;
   }
   .skills-row {
-    font-size: 8.95pt;
-    margin-bottom: 1.5px;
-    line-height: 1.22;
+    font-size: 8.85pt;
+    margin-bottom: 1.2px;
+    line-height: 1.19;
   }
   .skills-row strong {
     font-weight: bold;
   }
   .cert-row {
-    font-size: 8.8pt;
-    line-height: 1.21;
-    margin-top: 1.5px;
+    font-size: 8.7pt;
+    line-height: 1.18;
+    margin-top: 1px;
   }
 </style>
 </head>
@@ -144,7 +144,7 @@
   <span>Tiruchengode, India</span>
   <span>CGPA: 8.96</span>
 </div>
-<div class="item-header" style="margin-top: 1.5px;">
+<div class="item-header" style="margin-top: 1px;">
   <span>Amity University &nbsp;—&nbsp; Bachelor of Computer Applications (BCA)</span>
   <span>Jul 2022 – May 2025</span>
 </div>
@@ -167,7 +167,7 @@
   <span><a href="https://resume-analyzer.ksvaishnavidevibca.workers.dev/">Live Demo</a> &nbsp;|&nbsp; <a href="https://github.com/vaishnavithulir/resume-analyzer">GitHub</a></span>
 </div>
 <ul>
-  <li>Built backend processing engine featuring <strong>magic-byte binary verification</strong> to block MIME-type spoofing and malicious file payload injection.</li>
+  <li>Built backend processing engine featuring <strong>magic-byte binary verification</strong> and Apache Tika extraction to block MIME-type spoofing and malicious file payload injection.</li>
   <li>Designed normalized MySQL database schemas, resolved performance defects, and validated API reliability through 31 automated unit tests.</li>
 </ul>
 
@@ -176,7 +176,8 @@
   <span><a href="https://luxe-ecommerce-482.netlify.app/">Live Demo</a></span>
 </div>
 <ul>
-  <li>Developed Node.js/Express backend service with RESTful CRUD endpoints, custom error middleware, MongoDB schemas, and JWT/BCrypt RBAC.</li>
+  <li>Developed Node.js/Express backend service with RESTful CRUD endpoints, custom error middleware, MongoDB schemas, and optimized queries.</li>
+  <li>Enforced defensive security with <strong>JWT authentication, BCrypt password hashing, and role-based access control (RBAC)</strong> to protect sensitive endpoints.</li>
 </ul>
 
 <div class="item-header">
@@ -184,7 +185,8 @@
   <span><a href="https://vaishnavideviks.netlify.app/">Portfolio Project</a></span>
 </div>
 <ul>
-  <li>Engineered automated retrieval backend utilizing ChromaDB vector embeddings for real-time semantic search and containerized microservice deployment.</li>
+  <li>Engineered automated retrieval backend utilizing <strong>ChromaDB vector embeddings</strong> and FastAPI for real-time semantic search and agentic AI workflows.</li>
+  <li>Containerized backend microservices using <strong>Docker</strong> and established automated Jenkins CI/CD pipeline handoffs for isolated testing.</li>
 </ul>
 
 <div class="item-header">
@@ -193,6 +195,7 @@
 </div>
 <ul>
   <li>Engineered an 8-stage digital lending workflow with dynamic schema validation, masked KYC inputs, and complex form state management.</li>
+  <li>Implemented client-server input validation and state consistency checks to prevent corrupt payload submissions across multi-step workflows.</li>
 </ul>
 
 <div class="section-title">Certifications</div>
