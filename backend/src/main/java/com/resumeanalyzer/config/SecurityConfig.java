@@ -57,8 +57,8 @@ public class SecurityConfig {
                         .requestMatchers("/api/v1/resumes/**").permitAll()
                         // Public AI chatbot advisory endpoints
                         .requestMatchers("/api/v1/chat/**").permitAll()
-                        // Error routes
-                        .requestMatchers("/error").permitAll()
+                        // Root, health and error routes
+                        .requestMatchers("/", "/health", "/error").permitAll()
                         .anyRequest().authenticated()
                 )
                 .headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin))
