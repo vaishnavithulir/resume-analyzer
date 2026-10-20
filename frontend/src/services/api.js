@@ -1,6 +1,8 @@
 /**
  * Centralized API client for AI Resume Analyzer backend.
  */
+import { extractTextFromPdf } from '../utils/pdfExtractor';
+import { analyzeMatchClient, generateAdviceClient } from '../utils/clientMatcher';
 
 const API_ROOT = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/$/, '');
 const RESUMES_BASE_URL = `${API_ROOT}/api/v1/resumes`;
@@ -108,54 +110,90 @@ export async function getMe() {
 // =================== RESUME ANALYSIS API ===================
 
 export async function extractResumeText(file) {
-  const formData = new FormData();
-  formData.append('file', file);
+  try {
+    const formData = new FormData();
+    formData.append('file', file);
 
-  const response = await fetch(`${RESUMES_BASE_URL}/extract-text`, {
-    method: 'POST',
-    headers: getAuthHeaders(),
-    body: formData,
-  });
+    const response = await fetch(`${RESUMES_BASE_URL}/extract-text`, {
+      method: 'POST',
+      headers: getAuthHeaders(),
+      body: formData,
+    });
 
-  const data = await response.json();
-  if (!response.ok) {
-    throw new Error(data.message || 'Failed to extract resume text.');
+    if (response.ok) {
+      const data = await response.json();
+      return data.data;
+    }
+  } catch (backendError) {
+    console.warn('Backend unavailable, switching to browser extraction:', backendError);
   }
-  return data.data;
+
+  // Client-side fallback for PDF files (ensures live Cloudflare deploy works 100%)
+  if (file && file.name.toLowerCase().endsWith('.pdf')) {
+    return await extractTextFromPdf(file);
+  }
+
+  // Fallback for text/markdown files
+  if (file && (file.type.startsWith('text/') || file.name.endsWith('.txt') || file.name.endsWith('.md'))) {
+    const text = await file.text();
+    return {
+      extractedText: text,
+      wordCount: text.split(/\s+/).filter(Boolean).length,
+      characterCount: text.length,
+      snippet: text.slice(0, 300)
+    };
+  }
+
+  throw new Error('Could not parse file. Please upload a PDF or paste text directly.');
 }
 
 export async function analyzeFull({ resumeText, jobDescription, save = true, candidateName = '', jobTitle = '' }) {
-  const fullPath = `${RESUMES_BASE_URL}/analyze-full`;
-  const url = fullPath.startsWith('http') ? new URL(fullPath) : new URL(`${window.location.origin}${fullPath}`);
-  url.searchParams.append('save', save);
-  if (candidateName) url.searchParams.append('candidateName', candidateName);
-  if (jobTitle) url.searchParams.append('jobTitle', jobTitle);
+  try {
+    const fullPath = `${RESUMES_BASE_URL}/analyze-full`;
+    const url = fullPath.startsWith('http') ? new URL(fullPath) : new URL(`${window.location.origin}${fullPath}`);
+    url.searchParams.append('save', save);
+    if (candidateName) url.searchParams.append('candidateName', candidateName);
+    if (jobTitle) url.searchParams.append('jobTitle', jobTitle);
 
-  const response = await fetch(url.toString(), {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      ...getAuthHeaders(),
-    },
-    body: JSON.stringify({ resumeText, jobDescription }),
-  });
+    const response = await fetch(url.toString(), {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        ...getAuthHeaders(),
+      },
+      body: JSON.stringify({ resumeText, jobDescription }),
+    });
 
-  const data = await response.json();
-  if (!response.ok) {
-    throw new Error(data.message || 'Failed to analyze resume.');
+    if (response.ok) {
+      const data = await response.json();
+      return data.data;
+    }
+  } catch (backendError) {
+    console.warn('Backend unavailable, using client-side ATS match engine:', backendError);
   }
-  return data.data;
+
+  // Client-side fallback: executes 60/20/20 rubric rules directly in browser
+  const matchAnalysis = analyzeMatchClient(resumeText, jobDescription);
+  const aiAdvice = generateAdviceClient(resumeText, jobDescription, matchAnalysis);
+  return {
+    matchAnalysis,
+    aiAdvice
+  };
 }
 
 export async function getHistory(page = 0, size = 10) {
-  const response = await fetch(`${RESUMES_BASE_URL}/history?page=${page}&size=${size}`, {
-    headers: getAuthHeaders(),
-  });
-  const data = await response.json();
-  if (!response.ok) {
-    throw new Error(data.message || 'Failed to fetch history.');
+  try {
+    const response = await fetch(`${RESUMES_BASE_URL}/history?page=${page}&size=${size}`, {
+      headers: getAuthHeaders(),
+    });
+    if (response.ok) {
+      const data = await response.json();
+      return data.data;
+    }
+  } catch (err) {
+    console.warn('History API unreachable in standalone mode:', err);
   }
-  return data.data;
+  return { content: [], totalElements: 0, totalPages: 0 };
 }
 
 export async function getHistoryById(id) {
